@@ -1,0 +1,516 @@
+&nbsp; &nbsp; &nbsp; ```
+<title>Community Compass | Coming Soon</title>
+
+<meta
+  name="description"
+  content="Community Compass is being rebuilt. Stay connected and be the first to hear when our new website launches."
+/>
+
+<style>
+  :root {
+      --pink: #ef83c2;
+      --teal: #00cdb3;
+      --yellow: #ffc51b;
+      --black: #111111;
+      --cream: #fffdf8;
+      --text: #333333;
+      --muted: #777777;
+  }
+
+  * {
+      box-sizing: border-box;
+  }
+
+  html {
+      scroll-behavior: smooth;
+  }
+
+  body {
+      margin: 0;
+      min-height: 100vh;
+
+      font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+
+      color: var(--text);
+      background: var(--cream);
+  }
+
+  /* =========================================
+     PAGE
+     ========================================= */
+
+  .page {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 50px 25px 40px;
+  }
+
+
+  /* =========================================
+     LOGO
+     ========================================= */
+
+  .logo {
+      display: block;
+
+      width: min(420px, 75vw);
+      height: auto;
+
+      margin: 0 auto 55px;
+  }
+
+
+  /* =========================================
+     HERO
+     ========================================= */
+
+  .hero {
+      max-width: 760px;
+      margin: 0 auto;
+
+      text-align: center;
+  }
+
+  .eyebrow {
+      display: inline-block;
+
+      margin-bottom: 18px;
+      padding: 8px 16px;
+
+      color: var(--black);
+      background: var(--yellow);
+
+      border-radius: 50px;
+
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+  }
+
+  h1 {
+      margin: 0 0 22px;
+
+      color: var(--black);
+
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      font-weight: 800;
+  }
+
+  .hero-intro {
+      max-width: 650px;
+      margin: 0 auto;
+
+      font-size: 19px;
+      line-height: 1.65;
+  }
+
+
+  /* =========================================
+     COLOUR ACCENT
+     ========================================= */
+
+  .accent {
+      width: 70px;
+      height: 7px;
+
+      margin: 38px auto;
+
+      background:
+          linear-gradient(
+              90deg,
+              var(--pink) 0 33%,
+              var(--teal) 33% 66%,
+              var(--yellow) 66% 100%
+          );
+
+      border-radius: 10px;
+  }
+
+
+  /* =========================================
+     SIGNUP CARD
+     ========================================= */
+
+  .signup-card {
+      max-width: 720px;
+      margin: 45px auto 0;
+      padding: 45px;
+
+      background: #ffffff;
+
+      border: 3px solid var(--black);
+      border-radius: 24px;
+
+      box-shadow: 8px 8px 0 var(--teal);
+  }
+
+  .signup-content {
+      text-align: center;
+  }
+
+  .signup-content h2 {
+      margin: 0 0 12px;
+
+      color: var(--black);
+
+      font-size: 34px;
+      line-height: 1.1;
+  }
+
+  .signup-content p {
+      max-width: 560px;
+      margin: 0 auto 30px;
+
+      line-height: 1.65;
+  }
+
+
+  /* =========================================
+     FORM
+     ========================================= */
+
+  .signup-form {
+      max-width: 620px;
+      margin: 0 auto;
+  }
+
+  .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+  }
+
+  .form-field {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .form-field label {
+      margin-bottom: 7px;
+
+      color: var(--black);
+
+      font-size: 13px;
+      font-weight: 700;
+  }
+
+  .form-field input[type="text"],
+  .form-field input[type="email"] {
+      width: 100%;
+      padding: 14px 15px;
+
+      color: var(--text);
+      background: #fff;
+
+      border: 2px solid #dddddd;
+      border-radius: 8px;
+
+      font: inherit;
+
+      outline: none;
+
+      transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+  }
+
+  .form-field input:focus {
+      border-color: var(--teal);
+
+      box-shadow:
+          0 0 0 3px rgba(0, 205, 179, 0.15);
+  }
+
+
+  /* =========================================
+     CONSENT
+     ========================================= */
+
+  .consent {
+      margin-top: 20px;
+  }
+
+  .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.5;
+
+      cursor: pointer;
+  }
+
+  .checkbox-label input {
+      width: 17px;
+      height: 17px;
+
+      margin-top: 1px;
+
+      accent-color: var(--teal);
+  }
+
+
+  /* =========================================
+     BUTTON
+     ========================================= */
+
+  .signup-button {
+      width: 100%;
+      margin-top: 22px;
+      padding: 15px 22px;
+
+      color: #ffffff;
+      background: var(--black);
+
+      border: 0;
+      border-radius: 8px;
+
+      font: inherit;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition:
+          background 0.2s ease,
+          transform 0.2s ease;
+  }
+
+  .signup-button:hover {
+      background: var(--teal);
+      color: var(--black);
+
+      transform: translateY(-2px);
+  }
+
+  .signup-button:focus-visible {
+      outline: 3px solid var(--yellow);
+      outline-offset: 3px;
+  }
+
+
+  /* =========================================
+     PRIVACY NOTE
+     ========================================= */
+
+  .form-note {
+      margin: 14px 0 0;
+
+      color: var(--muted);
+
+      font-size: 11px;
+      line-height: 1.5;
+
+      text-align: center;
+  }
+
+
+  /* =========================================
+     FOOTER
+     ========================================= */
+
+  footer {
+      margin-top: 55px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.6;
+
+      text-align: center;
+  }
+
+  footer a {
+      color: var(--black);
+      font-weight: 600;
+  }
+
+
+  /* =========================================
+     MOBILE
+     ========================================= */
+
+  @media (max-width: 600px) {
+
+      .page {
+          padding: 30px 18px;
+      }
+
+      .logo {
+          width: min(340px, 85vw);
+          margin-bottom: 40px;
+      }
+
+      h1 {
+          font-size: 45px;
+          letter-spacing: -2px;
+      }
+
+      .hero-intro {
+          font-size: 17px;
+      }
+
+      .signup-card {
+          padding: 32px 22px;
+
+          box-shadow: 5px 5px 0 var(--teal);
+      }
+
+      .signup-content h2 {
+          font-size: 29px;
+      }
+
+      .form-row {
+          grid-template-columns: 1fr;
+          gap: 15px;
+      }
+  }
+</style>
+``` &nbsp; &nbsp; ```
+<main class="page">
+  <!-- =====================================
+         LOGO
+         ===================================== -->
+
+  <img
+    src="images/community-compass-logo.png"
+    alt="Community Compass"
+    class="logo"
+  />
+
+  <!-- =====================================
+         HERO
+         ===================================== -->
+
+  <section class="hero">
+    <div class="eyebrow">Something new is coming</div>
+
+    <h1>We’re building a new Community Compass.</h1>
+
+    <p class="hero-intro">
+      We’re giving Community Compass a fresh new look and rebuilding the website
+      to make it easier to discover, connect and engage with the people, places,
+      services and opportunities in our community.
+    </p>
+
+    <div class="accent"></div>
+  </section>
+
+  <!-- =====================================
+         SIGN UP
+         ===================================== -->
+
+  <section class="signup-card" aria-labelledby="signup-heading">
+    <div class="signup-content">
+      <h2 id="signup-heading">Keep in touch</h2>
+
+      <p>
+        Want to know when the new website is ready? Leave your details below and
+        we’ll keep you up to date with news from Community Compass.
+      </p>
+    </div>
+
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      class="signup-form"
+    >
+      <!-- YOUR WEB3FORMS ACCESS KEY -->
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+
+      <input
+        type="hidden"
+        name="subject"
+        value="Community Compass - New Website Signup"
+      />
+
+      <!-- Web3Forms honeypot -->
+      <input
+        type="checkbox"
+        name="botcheck"
+        style="display:none"
+        tabindex="-1"
+        autocomplete="off"
+      />
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="signup-name"> Name </label>
+
+          <input
+            type="text"
+            id="signup-name"
+            name="name"
+            placeholder="Your name"
+            autocomplete="name"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="signup-email"> Email address </label>
+
+          <input
+            type="email"
+            id="signup-email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="consent">
+        <label class="checkbox-label">
+          <input
+            type="checkbox"
+            name="consent"
+            value="I consent to receiving Community Compass updates."
+            required
+          />
+
+          <span>
+            Yes, I’d like to receive updates from Community Compass.
+          </span>
+        </label>
+      </div>
+
+      <button type="submit" class="signup-button">Keep me updated</button>
+
+      <p class="form-note">
+        We’ll only use your details to keep you informed about Community
+        Compass. You can unsubscribe at any time.
+      </p>
+    </form>
+  </section>
+
+  <!-- =====================================
+         FOOTER
+         ===================================== -->
+
+  <footer>
+    <p>Thanks for your patience while we build something new.</p>
+
+    <p>&copy; <span id="year"></span> Community Compass</p>
+  </footer>
+</main>
+
+<script>
+  document.getElementById("year").textContent =
+      new Date().getFullYear();
+</script>
+``` &nbsp; &nbsp; &nbsp;
