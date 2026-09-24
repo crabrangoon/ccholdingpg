@@ -1,4 +1,4 @@
-&nbsp; &nbsp; &nbsp; ```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Community Compass | Coming Soon</title>
 
 <meta
@@ -343,41 +343,59 @@
      MOBILE
      ========================================= */
 
-  @media (max-width: 600px) {
+ @media (max-width: 600px) {
+    .page {
+        padding: 25px 16px 30px;
+    }
 
-      .page {
-          padding: 30px 18px;
-      }
+    .logo {
+        width: min(300px, 80vw);
+        margin-bottom: 35px;
+    }
 
-      .logo {
-          width: min(340px, 85vw);
-          margin-bottom: 40px;
-      }
+    h1 {
+        font-size: clamp(38px, 11vw, 48px);
+        letter-spacing: -1.5px;
+    }
 
-      h1 {
-          font-size: 45px;
-          letter-spacing: -2px;
-      }
+    .hero-intro {
+        font-size: 16px;
+        line-height: 1.55;
+    }
 
-      .hero-intro {
-          font-size: 17px;
-      }
+    .accent {
+        margin: 30px auto;
+    }
 
-      .signup-card {
-          padding: 32px 22px;
+    .signup-card {
+        margin-top: 35px;
+        padding: 28px 18px;
+        border-radius: 18px;
+        box-shadow: 5px 5px 0 var(--teal);
+    }
 
-          box-shadow: 5px 5px 0 var(--teal);
-      }
+    .signup-content h2 {
+        font-size: 28px;
+    }
 
-      .signup-content h2 {
-          font-size: 29px;
-      }
+    .signup-content p {
+        font-size: 15px;
+    }
 
-      .form-row {
-          grid-template-columns: 1fr;
-          gap: 15px;
-      }
-  }
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .signup-button {
+        min-height: 50px;
+    }
+
+    footer {
+        margin-top: 45px;
+    }
+}
+
 </style>
 ``` &nbsp; &nbsp; ```
 <main class="page">
@@ -513,4 +531,3 @@
   document.getElementById("year").textContent =
       new Date().getFullYear();
 </script>
-``` &nbsp; &nbsp; &nbsp;
